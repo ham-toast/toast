@@ -8,23 +8,30 @@
 <link rel="icon" type="image/png" sizes="32x32" href="./resources/img/common/favi_32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./resources/img/common/favi_16.png">
 <meta property="og:url" content="//hamtoast.netlify.app/"/>
-<meta property="og:image" content="resources/img/common/meta_img.png">
+<meta property="og:image" content="./resources/img/common/meta_img.png">
 <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="./resources/css/common.css">
+<script src="./resources/js/jquery.js"></script>
 <title>남윤주</title>
 </head>
 <body>
-<div id="snow"></div>
+<section id="wrap">
+<div id="scroll-progress"><div id="scroll-bar"></div></div>
+<!-- <div id="snow"></div> -->
 <dl class="acc-start">
   <dt class="hide">바로가기 메뉴</dt>
 	<dd><a href="#cont">본문 바로가기</a></dd>
-	<dd><a href="#header">주메뉴 바로가기</a></dd>
+	<dd><a href="#lnb">주메뉴 바로가기</a></dd>
 </dl>
 
-<section id="wrap">
   <header id="header">
-    <h1 id="logo"><a href="/">남윤주</a></h1>
-    <nav>
+    <h1 id="logo"><a href="/"><i class="fa fa-smile-o" aria-hidden="true"></i><i class="fa fa-smile-o" aria-hidden="true"></i><i class="fa fa-smile-o" aria-hidden="true"></i><i class="fa fa-smile-o" aria-hidden="true"></i></a></h1>
+    <button type="button" id="btn-menu">
+      <strong class="bar"></strong>
+      <span class="hide">전체 메뉴 열기</span>
+    </button>
+    <!-- <div id="lnb">
       <ul class="clearfix">
         <li><a href="#">메뉴가 없어요</a></li>
         <li><a href="#">메뉴가 없어요</a></li>
@@ -32,10 +39,17 @@
         <li><a href="#">메뉴가 없어요</a></li>
         <li><a href="#">메뉴가 없어요</a></li>
       </ul>
-    </nav>
-
-    <div id="scroll-progress"><div id="scroll-bar"></div></div>
+    </div> -->
   </header>
+
+  <div id="cont">
+    <ul class="tabs-st1">
+      <li class="active"><a href="#tab1">탭1</a></li>
+      <li><a href="#tab2">탭2</a></li>
+      <li><a href="#tab3">탭3</a></li>
+      <li><a href="#tab4">탭4</a></li>
+    </ul>
+  </div>
 
 <script>
 window.onscroll = function() {
@@ -46,6 +60,18 @@ function scrollProgress() {
   var scrolled = (sTotal / sPosition) * 100;
   document.getElementById("scroll-bar").style.width = scrolled + "%";
 }
+
+$("#btn-menu").click(function(){
+  if($(this).hasClass("opend")){
+    $(this).removeClass("opend");
+    $(this).find(".hide").text("전체 메뉴 열기");
+
+  }else{
+    $(this).addClass("opend");
+    $(this).find(".hide").text("전체 메뉴 닫기");
+
+  }
+})
 </script>
 
 </section><!-- #wrap -->

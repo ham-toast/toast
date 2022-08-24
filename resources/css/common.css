@@ -1,5 +1,5 @@
-body{background: #000; padding: 30px}
-#scroll-progress{width: 100%; height: 3px; background: rgba(0,0,0,.15);}
+body{background: linear-gradient(to right, #b993d6, #8ca6db)}
+#scroll-progress{width: 100%; height: 5px; background: rgba(0,0,0,.5)}
 #scroll-bar{height: 100%; background: #000; width: 0}
 #snow {
   background-image: url('../img/common/snow1.png'), url('../img/common/snow2.png'), url('../img/common/snow3.png');
@@ -10,5 +10,28 @@ body{background: #000; padding: 30px}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
+#cont{padding: 0 50px}
+#wrap{position: relative;}
+#header{height: 5em; color: #000;display: flex; padding: 0 50px; align-items: center; justify-content: space-between; position: relative;}
+#logo{font-size: 30px; letter-spacing: 5px;}
+#lnb > ul{display: flex; align-items: center}
+#lnb > ul > li{margin-left: 30px;}
+#lnb > ul > li:first-child{margin-left: 0;}
+#lnb > ul > li > a{font-size: 18px; font-weight: 500;}
+#lnb a{display: block;}
 
-#wrap{background: #f36934; min-height: 100%;}
+#btn-menu{position: absolute; right: 50px; top:50%; transform: translateY(-50%); width: 30px; height: 24px;}
+#btn-menu .bar,#btn-menu .bar:before,#btn-menu .bar:after{position: absolute; width: 100%; height: 2px; background: #000; transition: all .4s cubic-bezier(0.77, 0, 0.175, 1); left: 0}
+#btn-menu .bar:before,#btn-menu .bar:after{content: ''}
+#btn-menu .bar{top:50%}
+#btn-menu .bar:before{top:-9px}
+#btn-menu .bar:after{top:9px}
+#btn-menu.opend .bar{background: transparent}
+#btn-menu.opend .bar:before,#btn-menu.opend .bar:after{top:0}
+#btn-menu.opend .bar:before{transform: rotate(-225deg);}
+#btn-menu.opend .bar:after{transform: rotate(225deg);}
+
+.tabs-st1{display: flex; align-items: center; justify-content: center;flex-wrap:wrap; margin: 0 -15px -10px; font-size: 1.25rem;}
+.tabs-st1 > li{margin: 0 15px 10px; position: relative;}
+.tabs-st1 a{display: block;}
+.tabs-st1 .active:after{left: 0; bottom: 0; width: 100%; background: #333;content: ''; position: absolute; height: 3px}
