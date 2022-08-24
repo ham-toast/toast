@@ -1,2 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
-.ff-dokdo{font-family: 'East Sea Dokdo'}
+/* @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap'); */
+@font-face {
+    font-family: 'Manse';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Manse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* .ff-dokdo{font-family: 'East Sea Dokdo'} */
